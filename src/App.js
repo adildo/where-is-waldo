@@ -5,7 +5,7 @@ import { db, storage } from './Firebase';
 import { collection, getDocs } from 'firebase/firestore'
 import { ref, getDownloadURL } from 'firebase/storage'
 import Nav from './components/Nav';
-import { BrowserRouter , Route, Routes } from 'react-router-dom';
+import { HashRouter , Route, Routes } from 'react-router-dom';
 import ScoreBoard from './components/ScoreBoard';
 
 
@@ -31,7 +31,7 @@ function App() {
 },[])
   
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div id='app'>
         <div>{logo ? <Nav logo={logo}/> :  null }</div>
         <Routes>
@@ -40,7 +40,7 @@ function App() {
         </Routes>
         <footer>Footer</footer>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
